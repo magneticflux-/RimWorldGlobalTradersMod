@@ -59,6 +59,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="GlobalTradersMod.cs" />
+        <Compile Include="Map_ExposeComponents_Patch.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>

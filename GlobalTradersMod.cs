@@ -1,6 +1,5 @@
 ﻿using HugsLib;
 using JetBrains.Annotations;
-using RimWorld;
 using Verse;
 
 namespace Global_Traders
@@ -10,9 +9,10 @@ namespace Global_Traders
     {
         public override string ModIdentifier { get; } = "GlobalTraders";
 
-        public override void MapLoaded(Map map)
+        public override void MapComponentsInitializing(Map map)
         {
             var target = Find.Maps.MinBy(m => m.uniqueID);
+
             if (map == target)
             {
                 Log.Message("Map is highest priority, don't replace passingShipManager");
