@@ -10,11 +10,6 @@ namespace Global_Traders
     {
         public override string ModIdentifier { get; } = "GlobalTraders";
 
-        public override void Initialize()
-        {
-            Log.Message($"Initialized {ModIdentifier}");
-        }
-
         public override void MapLoaded(Map map)
         {
             var target = Find.Maps.MinBy(m => m.uniqueID);
@@ -24,7 +19,6 @@ namespace Global_Traders
             }
             else
             {
-                
                 Log.Message(
                     $"Map is lower priority, replacing passingShipManager with one from id {target.uniqueID.ToString()}");
                 // Destroy the existing manager
